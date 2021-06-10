@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/edu_index_nav_item"
+        android:enabled="true"
+        android:icon="@drawable/edu_admin_nav"
+        android:title="@string/edu_admin_nav"/>
+    <item
+        android:id="@+id/schedule_nav_item"
+        android:enabled="true"
+        android:icon="@drawable/schedule_nav"
+        android:title="@string/schedule_nav"/>
+
+    <item
+        android:id="@+id/community_nav_item"
+        android:enabled="true"
+        android:icon="@drawable/community_nav"
+        android:title="@string/community"/>
+    <item
+        android:id="@+id/news_nav_item"
+        android:enabled="true"
+        android:icon="@drawable/news_nav"
+        android:title="@string/news_nav"/>
+    <item
+        android:id="@+id/myself_nav_item"
+        android:enabled="true"
+        android:icon="@drawable/myself_nav"
+        android:title="@string/myself"/>
 
 </menu>

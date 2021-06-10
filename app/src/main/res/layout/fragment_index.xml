@@ -1,14 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.IndexFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:id="@+id/index"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/tplan_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+
+            android:text="@string/teaching_plan"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/score_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:text="@string/score"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/test_plan_btn"
+            style="?android:attr/buttonStyle"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:text="@string/test_plan"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/appraise"
+            style="?android:attr/buttonStyle"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+
+            android:text="@string/appraise"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/elective_courses_btn"
+            style="?android:attr/buttonStyle"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:text="@string/elective_courses"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/resit_btn"
+            style="?android:attr/buttonStyle"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+
+            android:text="@string/resit_course"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/retake_course_btn"
+            style="?android:attr/buttonStyle"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+
+            android:text="@string/retake_course"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/physics_btn"
+            style="?android:attr/buttonStyle"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:text="@string/physics_exper_select"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button10"
+            style="?android:attr/buttonStyle"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+
+            android:text="@string/leave_manage_btn"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

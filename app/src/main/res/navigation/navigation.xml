@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/edu_index_nav_item">
+    <fragment
+        android:id="@+id/news_nav_item"
+        android:name="top.misaka10032w.nepuedu.fragment.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/schedule_nav_item"
+        android:name="top.misaka10032w.nepuedu.fragment.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/edu_index_nav_item"
+        android:name="top.misaka10032w.nepuedu.fragment.IndexFragment"
+        android:label="fragment_index"
+        tools:layout="@layout/fragment_index" >
+        <action
+            android:id="@+id/action_edu_admin_nav_item_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+        <action
+            android:id="@+id/action_edu_admin_nav_item_to_physicsCourseSelectionFragment"
+            app:destination="@id/physicsCourseSelectionFragment" />
+        <action
+            android:id="@+id/action_edu_admin_nav_item_to_teachingPlanFragment"
+            app:destination="@id/teachingPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myself_nav_item"
+        android:name="top.misaka10032w.nepuedu.fragment.MyselfFragment"
+        android:label="fragment_myself"
+        tools:layout="@layout/fragment_myself" />
+    <fragment
+        android:id="@+id/community_nav_item"
+        android:name="top.misaka10032w.nepuedu.fragment.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" />
+
+    <fragment
+        android:id="@+id/physicsCourseSelectionFragment"
+        android:name="top.misaka10032w.nepuedu.fragment.PhysicsCourseSelectionFragment"
+        android:label="fragment_physics_course_selection"
+        tools:layout="@layout/fragment_physics_course_selection" />
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="top.misaka10032w.nepuedu.fragment.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" />
+    <fragment
+        android:id="@+id/teachingPlanFragment"
+        android:name="top.misaka10032w.nepuedu.fragment.TeachingPlanFragment"
+        android:label="fragment_teaching_plan"
+        tools:layout="@layout/fragment_teaching_plan" />
+    <fragment
+        android:id="@+id/loginEduFragment"
+        android:name="top.misaka10032w.nepuedu.fragment.LoginEduFragment"
+        android:label="fragment_login_edu"
+        tools:layout="@layout/fragment_login_edu" />
+    <fragment
+        android:id="@+id/loginEduTh_Fragment"
+        android:name="top.misaka10032w.nepuedu.fragment.LoginEduThFragment"
+        android:label="LoginEduThFragment" />
+
 
 </navigation>

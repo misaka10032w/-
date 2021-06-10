@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">NEPU EduSystem</string>
+    <string name="edu_admin_nav">Edu System</string>
+    <string name="schedule_nav">Schedule</string>
+    <string name="news_nav">School News</string>
+</resources>

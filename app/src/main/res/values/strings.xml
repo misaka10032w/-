@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">东油教务</string>
+    <string name="edu_admin_nav">教务系统</string>
+    <string name="schedule_nav">课程表</string>
+    <string name="news_nav">校内要闻</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="retake_course">重修报名</string>
+    <string name="physics_exper_select">大物实验</string>
+    <string name="undefined" translatable="false">未定义</string>
+    <string name="teaching_plan">教学计划</string>
+    <string name="score">课程成绩</string>
+    <string name="appraise">教学评价</string>
+    <string name="elective_courses">选课报名</string>
+    <string name="resit_course">补考报名</string>
+    <string name="test_plan">考试计划</string>
+    <string name="stu_num_input">学号</string>
+    <string name="vpn_psw_input">VPN密码</string>
+    <string name="edu_psw_input">教务系统密码</string>
+    <string name="leave_manage_btn">假勤管理</string>
+    <string name="myself">我的</string>
+    <string name="community">樱花庄</string>
+    <string name="myname">姓名</string>
+    <string name="about_me">个人资料</string>
+    <string name="logout">注销</string>
+    <string name="about">关于</string>
+    <string name="setting">设置</string>
+    <string name="copyright">Copyright©2021 Misaka10032w</string>
+
+    <string-array name="list">   <!--数组资源名称为list 与layout中对应-->
+        <item>请选择学期</item>
+    </string-array>
 </resources>
