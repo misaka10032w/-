@@ -1,60 +1,76 @@
 package top.misaka10032w.nepuedu.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import top.misaka10032w.nepuedu.DyjwApplication
 import top.misaka10032w.nepuedu.R
+import top.misaka10032w.nepuedu.databinding.FragmentScoreBinding
+import top.misaka10032w.nepuedu.logic.ScoreAdapter
+import top.misaka10032w.nepuedu.logic.Util.BroccoliManager
+import top.misaka10032w.nepuedu.logic.model.scoreitems
+import kotlin.random.Random
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ScoreFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ScoreFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private var _binding: FragmentScoreBinding? = null
+    private val binding get() = _binding!!
+    val scoreList = ArrayList<scoreitems>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_score, container, false)
+    ): View {
+        _binding = FragmentScoreBinding.inflate(inflater, container, false)
+        binding.score.layoutManager = LinearLayoutManager(DyjwApplication.context)
+        val adapter = ScoreAdapter(DyjwApplication.context, scoreList)
+        binding.score.adapter = adapter
+repeat(10){scoreList.add(scoreitems("0","","","",0XFF4CAF50.toInt()))}
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ScoreFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ScoreFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    @SuppressLint("ResourceType")
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        val spinner: Spinner = binding.spinner
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter.createFromResource(
+            DyjwApplication.context,
+            R.array.list,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            spinner.adapter = adapter
+
+        }
+        binding.button2.setOnClickListener{
+            scoreList.clear()
+            repeat(20) {
+                val a = (0..100).random().toString()
+                scoreList.add(scoreitems("nmememem", "2010-2011", "3", a, 0XFF4CAF50.toInt()))
             }
+           val adapter = ScoreAdapter(DyjwApplication.context, scoreList)
+            binding.score.adapter = adapter
+
+            Log.v("123",scoreList[1].coursename)
+
+        }
+
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
+
